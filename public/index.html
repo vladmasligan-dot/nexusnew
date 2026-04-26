@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus — Share Your Moments</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #fafafa;
+      color: #262626;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #dbdbdb;
+      border-radius: 12px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .logo {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: #8e8e8e;
+      margin-bottom: 32px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #43a047;
+      border-radius: 50%;
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .description {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .endpoints {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 20px 24px;
+      text-align: left;
+      margin-bottom: 28px;
+    }
+
+    .endpoints h3 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #8e8e8e;
+      margin-bottom: 12px;
+    }
+
+    .endpoints ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .endpoints li {
+      font-size: 0.85rem;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .endpoints li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #dbdbdb;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .endpoints code {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 0.82rem;
+      color: #833ab4;
+    }
+
+    .footer {
+      font-size: 0.8rem;
+      color: #c7c7c7;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">Nexus</div>
+    <p class="tagline">Share Your Moments 📸</p>
+
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      Server is running
+    </div>
+
+    <p class="description">
+      Welcome to Nexus — an Instagram-like social network built with
+      Node.js, Express, and PostgreSQL. The API is live and endpoints
+      are being implemented.
+    </p>
+
+    <div class="endpoints">
+      <h3>API Endpoints</h3>
+      <ul>
+        <li><code>POST /api/auth/register</code> — Create account</li>
+        <li><code>POST /api/auth/login</code> — Sign in</li>
+        <li><code>GET &nbsp;/api/posts</code> — Browse feed</li>
+        <li><code>GET &nbsp;/api/users/:id</code> — View profile</li>
+        <li><code>GET &nbsp;/api/search/users</code> — Search users</li>
+      </ul>
+    </div>
+
+    <p class="footer">Nexus &copy; 2026</p>
+  </div>
+</body>
+</html>
